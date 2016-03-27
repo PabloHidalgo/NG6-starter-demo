@@ -1,8 +1,11 @@
 import { ngmodule } from '../bootstrap/ngmodule';
-import { coursesState } from './courses.state';
+import { coursesStates } from './courses.state';
+import { coursesComponent } from './courses.component';
 
 ngmodule.config(($stateProvider) => {
-  "ngInject";
-  const coursesStates = [coursesState];
+  'ngInject';
+
   coursesStates.forEach(state => $stateProvider.state(state));
-});
+})
+
+.component('courses', coursesComponent);

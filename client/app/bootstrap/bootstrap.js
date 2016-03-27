@@ -34,6 +34,7 @@ import 'normalize.css';
 // Import the submodules that make up the main subsections of the application
 // Each submodule registers its own states/services/components
 import '../app.module';
+import '../about/about';
 import '../courses/courses.module';
 
 // Import the components

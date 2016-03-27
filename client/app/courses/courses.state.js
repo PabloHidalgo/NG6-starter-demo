@@ -1,20 +1,65 @@
-export const coursesState = {
+export let coursesStates = [{
   name: 'courses',
   url: '/courses',
-  controller: function() {},
-  template: `
-    <h1 style="text-align: center;">{{$resolve.title}}</h1>
-
-    <course-gallery
-    	layout="row" layout-wrap
-    	courses="$resolve.courses">
-    </course-gallery>`,
+  component: 'courses',
   resolve: {
-    title: function() {
-      return 'COURSES TOP FAVOURITES';
+    title: () => {
+      return 'COURSES LIST';
     },
-    courses: function() {
+    courses: () => {
       return [];
     }
   },
-};
+},
+{
+  name: 'courses-top-favourites',
+  url: '/courses/top-favourites',
+  component: 'courses',
+  resolve: {
+    title: () => {
+      return 'COURSES TOP FAVOURITES';
+    },
+    courses: () => {
+      return [];
+    }
+  },
+},
+{
+  name: 'courses-top-enrollments',
+  url: '/courses/top-enrollments',
+  component: 'courses',
+  resolve: {
+    title: () => {
+      return 'COURSES TOP ENROLLMENTS';
+    },
+    courses: () => {
+      return [];
+    }
+  },
+},
+{
+  name: 'courses-my-favourites',
+  url: '/courses/my-favourites',
+  component: 'courses',
+  resolve: {
+    title: () => {
+      return 'MY FAVOURITES COURSES';
+    },
+    courses: () => {
+      return [];
+    }
+  },
+},
+{
+  name: 'courses-my-enrollments',
+  url: '/courses/my-enrollments',
+  component: 'courses',
+  resolve: {
+    title: () => {
+      return 'COURSES I\'M ENROLLED IN';
+    },
+    courses: () => {
+      return [];
+    }
+  },
+}];

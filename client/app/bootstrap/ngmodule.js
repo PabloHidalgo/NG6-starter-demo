@@ -5,7 +5,8 @@
 
 // External dependencies
 import * as angular from 'angular';
-import uiRouter from 'angular-ui-router';
+//import uiRouter from 'angular-ui-router';
+import uiRouter from '../../../libraries/angular-ui-router';
 import angularMaterial from 'angular-material';
 
 export let ngmodule = angular.module('app', [uiRouter, angularMaterial]);
